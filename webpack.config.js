@@ -5,9 +5,11 @@ module.exports = {
   output: {
     filename: "app.js"
   },
-    loaders: [{
+  module: {
+	 loaders: [{
         test: /\.(js|jsx)$/,
         loaders: ['babel'],
-        exclude: /node_modules/
+        exclude: /relationship-viewer\/node_modules/
     }]
+  }
 };
