@@ -1,15 +1,15 @@
 import d3 from 'd3';
 
 
-var createVisualization = function(containerElement){
+var createVisualization = function(containerElement, data){
 
 	console.log(containerElement);
 
 
 
 	// set up SVG for D3
-var width  = 960,
-    height = 500,
+var width  = 495,
+    height = 495,
     colors = d3.scale.category10();
 
 var svg = d3.select(containerElement)
@@ -29,8 +29,8 @@ var nodes = [
   ],
   lastNodeId = 2,
   links = [
-    {source: nodes[0], target: nodes[1], left: false, right: true },
-    {source: nodes[1], target: nodes[2], left: false, right: true }
+    {source: nodes[0], target: nodes[1], left: true, right: true },
+    {source: nodes[1], target: nodes[2], left: true, right: true }
   ];
 
 // init D3 force layout
