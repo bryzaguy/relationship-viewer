@@ -3,8 +3,6 @@ import d3 from 'd3';
 
 var createVisualization = function(containerElement, data){
 
-	console.log(containerElement);
-
 
 
 	// set up SVG for D3

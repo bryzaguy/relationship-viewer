@@ -1,5 +1,4 @@
-import _ from 'lodash';
-
+var _ = require('lodash');
 var sampleRules = {
   "rules": [
     {

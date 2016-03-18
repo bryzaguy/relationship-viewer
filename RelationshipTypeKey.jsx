@@ -9,7 +9,6 @@ propTypes:{
 
 
 getTypesList() {
-	console.log(this.props.types);
 	return _.map(this.props.types, function(type, index){
 		return <li key={index}>{type.name}
 		<span style={
