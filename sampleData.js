@@ -19,8 +19,12 @@ function mapRulesToTypes(rules){
 		if (itemTypeMap[rule.fromItemTypeId]){
 			rule.fromItemType = itemTypeMap[rule.fromItemTypeId];
 		}
+		if (relationshipTypeMap[rule.relationshipTypeId]){
+			rule.relationshipType = relationshipTypeMap[rule.relationshipTypeId];
+		}
 	});
 	return rules;
 }
 
 module.exports = mapRulesToTypes(sampleRules);
+
