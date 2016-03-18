@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import data from './sampleData.js';
 import processRulesUtil from './processRulesUtil.js';
-import RelationshipType from './RelationshipType.jsx';
+import RelationshipTypeKey from './RelationshipTypeKey.jsx';
 import createVisualization from './createVisualization.js';
 
 var Test = React.createClass({
@@ -12,9 +12,9 @@ var Test = React.createClass({
 		createVisualization(el, processRulesUtil.convertDataToDirectedGraph(data));
 		
 	},
-	getRelationshipTypes(){
+	getRelationshipTypesForKey(){
 		var relTypesinRules = _.uniq(_.map(data.rules, function(rule){return rule.relationshipType;}))
-		console.log(relTypesinRules);
+		return <RelationshipTypeKey types={relTypesinRules} />
 
 	},
 	render() {
@@ -23,7 +23,7 @@ var Test = React.createClass({
 				<div ref="viz_container" className="container">
 				<h1 className="title">Relationship Rules for Jama Main</h1>
 				<div className=" container key"><h1 className="title">Relationship Types</h1>
-				{this.getRelationshipTypes()}
+				{this.getRelationshipTypesForKey()}
 				</div>
 				</div>
 			</div>
