@@ -1,10 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import data from './sampleData.js';
+import createVisualization from './createVisualization.js';
 
 var Test = React.createClass({
+
+	componentDidMount() {
+		var el = this.refs.viz_container;
+		createVisualization(el);
+		
+	},
 	render() {
-		return <div>Rulessss: {JSON.stringify(data.rules)}</div>;
+		return <div>
+			<div ref="viz_container" className="container"></div>
+			Project Rules: {JSON.stringify(data.rules)}
+		</div>;
 	}
 });
 
