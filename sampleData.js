@@ -138,14 +138,14 @@ var sampleRules = {
     {
       "id": 2700,
       "fromItemTypeId": 104790,
-      "toItemTypeId": 104790,
+      "toItemTypeId": 101667,
       "forCoverage": true,
       "relationshipTypeId": 10098
     },
     {
       "id": 2708,
       "fromItemTypeId": 101667,
-      "toItemTypeId": 101667,
+      "toItemTypeId": 104790,
       "forCoverage": false,
       "relationshipTypeId": 10098
     }
@@ -155,7 +155,7 @@ var sampleRules = {
 var itemTypeMap = {
 	101668: "Epic", 101667: "Story", 101645: "Requirement", 101654: "Test Case", 101643: "Defect", 101656: "Business Objective", 107365: "Risk", 101653: "Hazard", 107391: "Cost", 107383: "Test Plan", 107393: "Functional Requirement", 107386: "Development Set", 104790: "Regulatory Requirement", 101644: "Marketing Requirement", 107362: "Compliance Risk"
 }
-
+       
 var relationshipTypeMap = {
 	10098: {name: "Dependent on", color: "blue"},
 	10099: {name: "Verified by", color: "green"},
