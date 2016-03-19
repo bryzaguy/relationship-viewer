@@ -3,7 +3,7 @@ var rules = require('./sampleData.js').rules;
 
 function convertDataToDirectedGraph(){
 var nodes = createNodes();
-var links = createLinks();
+var links = createLinks(nodes);
 
 	return {
 		nodes: nodes,
@@ -12,8 +12,7 @@ var links = createLinks();
 	    }
 }	
 
-function createLinks(){
-	var nodes = createNodes();
+function createLinks(nodes){
 	var links = [];
 
 	_.each(rules, function(rule, i){
@@ -24,6 +23,7 @@ function createLinks(){
 			right: true
 		});
 	});
+
 	return links;
 }
 

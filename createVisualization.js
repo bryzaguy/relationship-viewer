@@ -26,23 +26,17 @@ var svg = d3.select(containerElement)
 
 var nodes = realNodes;
 
-var links = [{
-  source: nodes[0],
-  target: nodes[1],
-  right: true,
-  left: false
-}, {
-  source: nodes[1],
-  target: nodes[2],
-  right: true,
-  left: false
-}, {
-  source: nodes[2],
-  target: nodes[0],
-  right: true,
-  left: false
-}];
+// var links = [{
+//   source: nodes[0],
+//   target: nodes[2],
+//   right: true,
+//   left: false
+//   }];
+
+var links = realLinks;
+
 debugger;
+// var links = [];
 
   var lastNodeId = 2
   // // nodes = payload.nodes,
