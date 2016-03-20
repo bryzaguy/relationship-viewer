@@ -19,6 +19,8 @@ function createLinks(nodes){
 		links.push({
 			source: _.find(nodes, {itemType: rule.fromItemType}),
 			target: _.find(nodes, {itemType: rule.toItemType}),
+			relationshipType: rule.relationshipType,
+			forCoverage: rule.forCoverage,
 			left: false,
 			right: true
 		});
@@ -30,11 +32,15 @@ function createLinks(nodes){
 function createNodes(){
 	var nodes = _.uniqBy(_.concat(
 		_.map(rules, function(rule, index){
-		return {itemType: rule.fromItemType}
+		return {
+			itemType: rule.fromItemType,
+			icon: rule.fromIcon
+		}
 	}), 
 		_.map(rules, function(rule, index){
 		return {
-			itemType: rule.toItemType,
+			itemType: rule.toItemType, 
+			icon: rule.toIcon
 		}
 	})), 'itemType');
 

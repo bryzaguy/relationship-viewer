@@ -27,8 +27,6 @@ var Test = React.createClass({
 				</div>
 				</div>
 			</div>
-
-			Project Rules: {JSON.stringify(data.rules)}
 		</div>;
 	}
 });

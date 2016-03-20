@@ -153,26 +153,56 @@ var sampleRules = {
 }
 
 var itemTypeMap = {
-	101668: "Epic", 101667: "Story", 101645: "Requirement", 101654: "Test Case", 101643: "Defect", 101656: "Business Objective", 107365: "Risk", 101653: "Hazard", 107391: "Cost", 107383: "Test Plan", 107393: "Functional Requirement", 107386: "Development Set", 104790: "Regulatory Requirement", 101644: "Marketing Requirement", 107362: "Compliance Risk"
+    101668: "Epic",
+    101667: "Story",
+    101645: "Requirement",
+    101654: "Test Case",
+    101643: "Defect",
+    101656: "Business Objective",
+    107365: "Risk",
+    101653: "Hazard",
+    107391: "Cost",
+    107383: "Test Plan",
+    107393: "Functional Requirement",
+    107386: "Development Set",
+    104790: "Regulatory Requirement",
+    101644: "Marketing Requirement",
+    107362: "Compliance Risk"
 }
+
+var itemTypeIconMap = {
+    101668: "\uf318",
+    101667: "\uf472",
+    101645: "\uf229",
+    101654: "\uf120",
+    101643: "\uf2be",
+    101656: "\uf356",
+    107365: "\uf39b",
+    101653: "\uf2a4",
+    107391: "\uf316",
+    107383: "\uf454",
+    107393: "\uf43d",
+    107386: "\uf412",
+    104790: "\uf2ad",
+    101644: "\uf2ab",
+    107362: "\uf2ad"
+}
+
        
 var relationshipTypeMap = {
-	10098: {name: "Dependent on", color: "blue"},
-	10099: {name: "Verified by", color: "green"},
-	10096: {name: "Put at risk by", color: "red"}
+    10098: { name: "Dependent on", color: "blue" },
+    10099: { name: "Verified by", color: "green" },
+    10096: { name: "Put at risk by", color: "red" }
 }
+
 
 function mapRulesToTypes(rules){
 	_.each(rules.rules, function(rule){
-		if (itemTypeMap[rule.toItemTypeId]){
-			rule.toItemType = itemTypeMap[rule.toItemTypeId];
-		}
-		if (itemTypeMap[rule.fromItemTypeId]){
-			rule.fromItemType = itemTypeMap[rule.fromItemTypeId];
-		}
-		if (relationshipTypeMap[rule.relationshipTypeId]){
-			rule.relationshipType = relationshipTypeMap[rule.relationshipTypeId]
-		}
+    rule.toItemType = itemTypeMap[rule.toItemTypeId];
+    rule.fromItemType = itemTypeMap[rule.fromItemTypeId];
+    rule.toIcon = itemTypeIconMap[rule.toItemTypeId];
+    rule.fromIcon = itemTypeIconMap[rule.fromItemTypeId];
+		rule.relationshipType = relationshipTypeMap[rule.relationshipTypeId];
 	});
 	return rules;
 }
