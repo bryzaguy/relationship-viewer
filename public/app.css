@@ -1,0 +1,88 @@
+svg {
+  background-color: #FFF;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.outer_container {
+  margin: 100px 100px 100px 100px;
+}
+.title {
+  position: absolute;
+  left: 10px;
+  font-size: 16px;
+}
+
+.item_list {
+  position: relative;
+  top: 40px;
+  line-height: 30px;
+}
+
+.container {
+  border: 3px solid black;
+  height: 500px;
+  width: 500px;
+  position: relative;
+}
+
+.key {
+  position: absolute;
+  display: inline-block;
+  width: 230px;
+  height: 200px;
+  right: -240px;
+  top: -3px;
+  border: 3px solid black;
+}
+
+svg:not(.active):not(.ctrl) {
+  cursor: crosshair;
+}
+
+path.link {
+  fill: none;
+  stroke: #000;
+  stroke-width: 4px;
+  cursor: default;
+}
+
+svg:not(.active):not(.ctrl) path.link {
+  cursor: pointer;
+}
+
+path.link.selected {
+  stroke-dasharray: 10,2;
+}
+
+path.link.dragline {
+  pointer-events: none;
+}
+
+path.link.hidden {
+  stroke-width: 0;
+}
+
+circle.node {
+  stroke-width: 1.5px;
+  cursor: pointer;
+}
+
+circle.node.reflexive {
+  stroke: #000 !important;
+  stroke-width: 2.5px;
+}
+
+text {
+  font: 12px sans-serif;
+  pointer-events: none;
+}
+
+text.id {
+  text-anchor: middle;
+  font-weight: bold;
+}
