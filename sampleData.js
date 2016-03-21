@@ -76,7 +76,7 @@ var sampleRules = {
       "fromItemTypeId": 101643,
       "toItemTypeId": 101656,
       "forCoverage": false,
-      "relationshipTypeId": 10098
+      "relationshipTypeId": 10099
     },
     {
       "id": 2446,
@@ -90,14 +90,14 @@ var sampleRules = {
       "fromItemTypeId": 104790,
       "toItemTypeId": 101653,
       "forCoverage": false,
-      "relationshipTypeId": 10098
+      "relationshipTypeId": 10096
     },
     {
       "id": 2677,
       "fromItemTypeId": 101667,
       "toItemTypeId": 107391,
       "forCoverage": false,
-      "relationshipTypeId": 10098
+      "relationshipTypeId": 10096
     },
     {
       "id": 2678,
@@ -118,7 +118,7 @@ var sampleRules = {
       "fromItemTypeId": 101667,
       "toItemTypeId": 107386,
       "forCoverage": false,
-      "relationshipTypeId": 10096
+      "relationshipTypeId": 10099
 
     },
     {
@@ -126,7 +126,7 @@ var sampleRules = {
       "fromItemTypeId": 107362,
       "toItemTypeId": 107386,
       "forCoverage": true,
-      "relationshipTypeId": 10098
+      "relationshipTypeId": 10099
     },
     {
       "id": 2698,
